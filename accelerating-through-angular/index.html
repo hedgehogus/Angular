@@ -3,6 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>MyFirstApp</title>
+        <script>
+            System.import('app')
+            .catch(function(err){console.error(err);});
+        </script>
     </head>
     <body>
         <my-app>Loading App ... </my-app>
