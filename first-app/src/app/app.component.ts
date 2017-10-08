@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
     <p>{{carPart.inStock}} in Stock</p>`,
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'Ultra Racing';
   carPart = {
