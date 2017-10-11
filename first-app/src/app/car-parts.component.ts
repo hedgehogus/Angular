@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CarPart } from './car-part'
+import { CARPARTS } from './mocks'
 
 @Component({
   selector: 'car-parts',
@@ -7,31 +9,15 @@ import { Component } from '@angular/core';
 })
 
 export class CarPartsComponent { 
-  carParts = [{
-        "id":1,
-        "name":"super Tires",
-        "description":"these tires are the very best",
-        "inStock":5,
-        "price": 4.99
-    },
-    {
-        "id":2,
-        "name":"Reinforced Shoks",
-        "description":"these tires are the very best",
-        "inStock":4,
-        "price": 9.99
-    },
-    {
-        "id":3,
-        "name":"super Hedgehogs",
-        "description":"these Hedgehogs are hoglets",
-        "inStock":0,
-        "price": 6.99
-    }];
+    // tells TypeScript to treat this like an array of CarParts
+    carParts: CarPart[] ;
 
-    // inside a TypeScriptt class we dont use the word "function",
-    // just like we don't use "let" to declare the properties
-
+    ngOnInit() {
+        this.carParts = CARPARTS;
+    }
+    // ngOnInit is onvoced after the component is constructed and is the best place to initialize 
+    // property values
+    
     totalCarParts(){
       // let sum = 0;
       // for (let carPart of this.carParts){
