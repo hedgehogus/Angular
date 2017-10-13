@@ -1,9 +1,14 @@
 <p> There are {{totalCarParts()}} total parts in stock.</p> 
 <ul>      
-    <li class="card" *ngFor="let carPart of carParts">
+    <li class="card" *ngFor="let carPart of carParts" [class.featured]="carPart.featured">
         <div class="panel-body">
             <table class="product-info">
                 <tr>
+                    <td>
+                        <div class="photo">
+                            <img [src]="carPart.image">
+                        </div>
+                    </td>
                     <td>
                         <h2>{{carPart.name | uppercase}}</h2>
                         <p class="description">{{carPart.description}}</p>                        

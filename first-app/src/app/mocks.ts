@@ -6,7 +6,8 @@ export const CARPARTS: CarPart [] = [{
         "description":"these tires are the very best",
         "inStock":5,        
         "price": 4.99,
-        "image":"/images/hedgehog1.jpg"
+        "image":"assets/images/hedgehog1.jpg",
+        "featured":false
     },
     {
         "id":2,
@@ -14,7 +15,8 @@ export const CARPARTS: CarPart [] = [{
         "description":"these tires are the very best",
         "inStock":4,        
         "price": 9.99,
-        "image":"./images/hedgehog2.jpg"
+        "image":"assets/images/hedgehog2.jpg",
+        "featured":true
     },
     {
         "id":3,
@@ -22,7 +24,8 @@ export const CARPARTS: CarPart [] = [{
         "description":"these Hedgehogs are hoglets",
         "inStock":0,        
         "price": 6.99,
-        "image":"./images/hedgehog3.jpg"
+        "image":"assets/images/hedgehog3.jpg",
+        "featured":false
     }];
 
     // inside a TypeScript class we dont use the word "function",
