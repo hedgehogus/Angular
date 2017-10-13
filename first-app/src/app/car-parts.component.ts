@@ -14,9 +14,29 @@ export class CarPartsComponent {
 
     ngOnInit() {
         this.carParts = CARPARTS;
-    }
-    // ngOnInit is onvoced after the component is constructed and is the best place to initialize 
+    };
+    // ngOnInit is invoked after the component is constructed and is the best place to initialize 
     // property values
+    
+    upQuantity(carPart){
+      if (carPart.quantity < carPart.inStock){
+         carPart.quantity++;
+      }
+    }
+
+    downQuantity(carPart){
+      if (carPart.quantity !== 0){
+         carPart.quantity--;
+      }
+    }
+
+    showKey(event){
+      console.log(event);
+    }
+
+    getCoord(event, carPart){
+      console.log(carPart.name + " " + event.clientX + " ," + event.clientY);
+    }
     
     totalCarParts(){
       // let sum = 0;

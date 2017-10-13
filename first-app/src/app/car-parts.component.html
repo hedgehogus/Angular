@@ -6,7 +6,7 @@
                 <tr>
                     <td>
                         <div class="photo">
-                            <img [src]="carPart.image">
+                            <img [src]="carPart.image" (mouseover)="getCoord($event, carPart)">
                         </div>
                     </td>
                     <td>
@@ -16,6 +16,14 @@
                         <p *ngIf="carPart.inStock === 0">Out of Stock</p>
                     </td>                    
                     <td class="price">{{carPart.price | currency:'EUR':true}}</td>
+                    <td>
+                        <div class="select-quantity">
+                            <button class="decrease" (click)="downQuantity(carPart)">-</button>
+                            <p>{{carPart.quantity}}</p>
+                            <button class="increase" (click)="upQuantity(carPart)">+</button>
+                        </div>
+                        <input type="text" (keydown)="showKey($event)">
+                    </td>
                 </tr>
             </table>
         </div>

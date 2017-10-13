@@ -14,4 +14,13 @@
     border-image: linear-gradient(to left, #818fd8 0%, #cbb4e2 50%, #a6f2f5 100%);
     border-image-slice: 10;
 }
+
+.select-quantity{
+    padding: 20px;
+    display: inline-block;
+}
+
+.select-quantity p{
+    display: inline-block;    
+}
      

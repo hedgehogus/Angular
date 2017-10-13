@@ -6,6 +6,7 @@ export class CarPart{
     price: number;
     image: string;
     featured: boolean;
+    quantity: number;
 }
 // we are declaring what type each of our properties are
 // this will allow our compiler to check our code and ensure
