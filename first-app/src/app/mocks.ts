@@ -25,7 +25,7 @@ export const CARPARTS: CarPart [] = [{
         "name":"super Hedgehogs",
         "description":"these Hedgehogs are hoglets",
         "inStock":0,        
-        "price": 6.99,
+        "price": 7.99,
         "image":"assets/images/hedgehog3.jpg",
         "featured":false,
         "quantity": 0
