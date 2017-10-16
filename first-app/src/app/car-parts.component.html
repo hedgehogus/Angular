@@ -19,7 +19,7 @@
                     <td>
                         <div class="select-quantity">
                             <button class="decrease" (click)="downQuantity(carPart)">-</button>
-                            <p>{{carPart.quantity}}</p>
+                            <input class="number" type="text" [value]="carPart.quantity">
                             <button class="increase" (click)="upQuantity(carPart)">+</button>
                         </div>
                         <input type="text" (keydown)="showKey($event)">

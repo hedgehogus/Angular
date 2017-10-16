@@ -20,7 +20,9 @@
     display: inline-block;
 }
 
-.select-quantity p{
-    display: inline-block;    
+.number {
+    width: 50px;   
 }
+
+
      
