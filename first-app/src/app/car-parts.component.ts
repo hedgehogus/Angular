@@ -13,9 +13,15 @@ export class CarPartsComponent {
     // tells TypeScript to treat this like an array of CarParts
     carParts: CarPart[] ;
 
+    //injecting the dependency
+    // constructor for this component
+    // private - means TypeScript automatically defines component properties
+    // based on the parameters
+    constructor(private racingDataService: RacingDataService){};
+
     ngOnInit() {
-      let racingDataService = new RacingDataService();
-      this.carParts = racingDataService.getCarParts();
+      
+      this.carParts = this.racingDataService.getCarParts();
     };
     // ngOnInit is invoked after the component is constructed and is the best place to initialize 
     // property values
