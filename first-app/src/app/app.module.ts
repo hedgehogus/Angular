@@ -7,6 +7,8 @@ import { CarPartsComponent} from './car-parts.component';
 
 import { RacingDataService } from './racing-data.service';
 
+import { HttpModule} from "@angular/http"
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { RacingDataService } from './racing-data.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [RacingDataService],
   bootstrap: [AppComponent]
