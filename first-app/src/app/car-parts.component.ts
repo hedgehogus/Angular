@@ -22,7 +22,10 @@ export class CarPartsComponent {
     ngOnInit() {
       
       this.racingDataService.getCarParts()
-                    .subscribe(carParts => this.carParts = carParts);
+                  .subscribe(carParts => {                   
+                    this.carParts = carParts});
+
+      console.log(this.carParts);
     };
     // ngOnInit is invoked after the component is constructed and is the best place to initialize 
     // property values

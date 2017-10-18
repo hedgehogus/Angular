@@ -1,4 +1,4 @@
-//import { CARPARTS } from './mocks';
+import { CARPARTS } from './mocks';
 import { CarPart } from './car-part'
 import { Injectable } from '@angular/core';
 
@@ -16,6 +16,8 @@ export class RacingDataService {
         //get returns observable instead of promise
         // observable give us additional functionality on our http calls
         // one of which is to treat the return value like an array
-        return this.http.get('app/car-parts.json').map(response => <CarPart[]> response.json().data);
+        let a = this.http.get('assets/car-parts.json').map(response => <CarPart[]> response.json().data);
+        
+        return a;
     }
 }
