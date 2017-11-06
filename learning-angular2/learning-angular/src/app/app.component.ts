@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  selector: 'hello-angular',
+  template: `<h1> {{greeting}} </h1>
+    <pomodoro-timer></pomodoro-timer>`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  greeting: string;
+
+  constructor() {
+    this.greeting = 'Hello Angular 2!';
+  } 
 }
