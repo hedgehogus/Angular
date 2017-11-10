@@ -43,6 +43,8 @@ h4 {
 }
 .grid-pad {
   padding: 10px 0;
+  width:700px;
+  display: inline-block;
 }
 .grid-pad > [class*='col-']:last-of-type {
   padding-right: 20px;
