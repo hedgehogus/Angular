@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoundownComponent implements OnInit {
   seconds: number = 25;
-  intervalld: number;
+  intervalId: any;
 
   constructor() { 
-    this.intervalld = setlnterval(() => this.tick(), 1000);
+    this.intervalId = setInterval(() => this.tick(), 1000);
   }
 
   ngOnInit() {
@@ -18,8 +18,7 @@ export class CoundownComponent implements OnInit {
 
   private tick(): void {
     if (--this.seconds < 1) {
-      clearlnterval(this.intervalld);
+      clearInterval(this.intervalId);
     }
-}
-
+  }
 }
