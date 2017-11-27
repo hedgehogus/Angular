@@ -11,4 +11,8 @@ export class AppComponent {
   constructor() {
     this.greeting = 'Hello Angular 2!';
   } 
+
+  onCountdownCompleted():void{
+    alert('Time up');
+  }
 }

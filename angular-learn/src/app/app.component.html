@@ -5,4 +5,4 @@
       </div>
     </div>
 </nav>
-<app-coundown [seconds]="25" ></app-coundown>
+<app-coundown [seconds]="25" (complete)="onCountdownCompleted()"></app-coundown>
