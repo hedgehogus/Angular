@@ -4,6 +4,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   selector: 'app-coundown',
   templateUrl: './coundown.component.html',
   styleUrls: ['./coundown.component.css']
+   // alternative syntax, not recommended
+  // inputs:['seconds'],
+  // outputs: ['complete', 'progress']
 })
 export class CoundownComponent implements OnInit {
   @Input() seconds: number;

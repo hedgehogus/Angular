@@ -7,8 +7,14 @@
 </nav>
 <app-coundown [seconds]="25" 
   (complete)="onCountdownCompleted()"
-  (progress)="timeout = $event">
+  (progress)="timeout = $event"
+  #counter>
 </app-coundown>
+<button
+  class="btn btn-default"
+  (click)="counter.seconds = 25">
+  Reset countdown to 25 seconds
+</button>
 <p *ngIf="timeout < 10">
     Beware! Only <strong>{{timeout}} seconds </strong> left.
 </p>
