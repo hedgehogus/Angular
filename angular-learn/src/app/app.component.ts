@@ -13,6 +13,6 @@ export class AppComponent {
   } 
 
   onCountdownCompleted():void{
-    alert('Time up');
+    console.log('Time up');
   }
 }
