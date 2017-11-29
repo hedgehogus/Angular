@@ -1,9 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter,ViewEncapsulation  } from '@angular/core';
 
 @Component({
   selector: 'app-coundown',
   templateUrl: './coundown.component.html',
-  styleUrls: ['./coundown.component.css']
+  //styleUrls: ['./coundown.component.css']
+  styles: ['h1 { color: #900 }'],
+  encapsulation: ViewEncapsulation.Emulated
    // alternative syntax, not recommended
   // inputs:['seconds'],
   // outputs: ['complete', 'progress']
