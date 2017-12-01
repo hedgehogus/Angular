@@ -1,0 +1,20 @@
+<h1> Directives </h1>
+<p> NgIf </p>
+<h2 *ngIf="someValue === 5"> {{someValue}} </h2>
+<p> NgFor</p>
+<ol>
+  <li *ngFor="let value of someArray, let i = index, let last = last">
+    {{value}} - {{i}} - {{last}}
+  </li>
+</ol>
+<p> NgStyle </p>
+<h2 [ngStyle]="{color:'#00f'}"> this is style </h2>
+<p> NgClass </p>
+<h2 [ngClass] = "'featured'"> Featured </h2>
+<h2 [class.featured] = "true"> Featured </h2>
+<p>NgSwitch, NgSwitchWhen, NgSwitchDefault</p>
+<div [ngSwitch]="someValue">
+  <p *ngSwitchCase="4">{{someValue}} = 4</p>
+  <p *ngSwitchCase="5">{{someValue}} = 5</p>
+  <p *ngSwitchDefault> {{someValue}} = default </p>
+</div>

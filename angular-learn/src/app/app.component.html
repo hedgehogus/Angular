@@ -1,12 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top">
-    <div class="container">
-      <div class="navbar-header">
-        <h1>
-        <strong class="navbar-brand">My Pomodoro Timer</strong>
-        </h1>
-      </div>
-    </div>
-</nav>
+<div [hidden]="true">
 <app-coundown [seconds]="10" 
   (complete)="onCountdownCompleted()"
   (progress)="timeout = $event"
@@ -21,3 +13,5 @@
     Beware! Only <strong>{{timeout}} seconds </strong> left.
 </h1>
 <h1 *ngIf="timeout === 0">Time up!</h1>
+</div>
+<app-directives></app-directives>
