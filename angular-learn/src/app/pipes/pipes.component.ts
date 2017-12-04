@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pipes.component.css']
 })
 export class PipesComponent implements OnInit {
+  someString: string = "Hedgehogs Are here"
+  someNumber: number = 23487854/233432435;
+  someDate: Date = new Date();
+  someObj: Object = {
+    name:'Eve',
+    age: 43
+  } 
 
   constructor() { }
 

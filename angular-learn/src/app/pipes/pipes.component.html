@@ -1,3 +1,44 @@
-<p>
-  pipes works!
-</p>
+<h1>Pipes</h1>
+<p>uppercase</p>
+<h2>{{someString | uppercase }}</h2>
+<p>lowercase</p>
+<h2>{{someString | lowercase }}</h2>
+<p></p>
+
+<div [hidden] ="true">
+<p>number</p>
+<h2>{{someNumber | number:'1.2-2' }}</h2>
+<p>percent</p>
+<h2>{{someNumber | percent:'1.2-2' }}</h2>
+<p>currency</p>
+<h2>{{someNumber | currency:"GBP":"true":'1.1-3' }}</h2>
+<p></p>
+</div>
+
+<p>slice</p>
+<h2>{{someString | slice:5 |lowercase}}</h2>
+<h2>{{someString | slice:5:9 |lowercase}}</h2>
+<p></p>
+
+<div [hidden] ="true">
+<p>date</p>
+<h2>{{someDate | date:'medium'}}</h2>
+<h2>{{someDate | date:'short'}}</h2>
+<h2>{{someDate | date:'fullDate'}}</h2>
+<h2>{{someDate | date:'longDate'}}</h2>
+<h2>{{someDate | date:'mediumDate'}}</h2>
+<h2>{{someDate | date:'shortDate'}}</h2>
+<h2>{{someDate | date:'mediumTime'}}</h2>
+<h2>{{someDate | date:'shortTime'}}</h2>
+</div>
+<p></p>
+
+<p>json</p>
+<h2>{{someObj | json}}</h2>
+<p></p>
+
+<p>replace</p>
+<h2>???</h2>
+<!-- <h2>{{someString | replace:"hog":"pig"}}</h2> -->
+<p></p>
+
