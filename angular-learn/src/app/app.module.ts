@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PomodoroTimerComponent } from './pomodoro-timer/pomodoro-timer.component';
 import { CoundownComponent } from './coundown/coundown.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { DirectivesComponent } from './directives/directives.component';
     AppComponent,
     PomodoroTimerComponent,
     CoundownComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule
