@@ -6,3 +6,16 @@ table {
     margin: auto;
     max-width: 760px;
 }
+
+.text-center {
+    text-align: center;
+}
+
+.label {
+   border: 1px solid lightgrey; 
+}
+
+.label-danger{
+    color: red;
+}
+

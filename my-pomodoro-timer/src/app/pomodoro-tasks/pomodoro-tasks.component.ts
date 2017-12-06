@@ -58,4 +58,9 @@ export class PomodoroTasksComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleTask(task: Task): void {
+    task.queued = !task.queued;
+  }
+
+  
 }
