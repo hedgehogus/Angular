@@ -5,6 +5,15 @@
     <span class="small" *ngIf="queuedPomodoros > 0">
     (Estimated time: {{ queuedPomodoros * 25 }})</span>
   </h3>
+  <p>
+    <span *ngFor="let queuedTask of tasks">
+      <app-icons  *ngIf="queuedTask.queued" [task]="queuedTask" size="70"
+        (mouseover)="tooltip.innerText = queuedTask.name"
+        (mouseout)="tooltip.innerText = 'Mouseover for details'">
+      </app-icons>
+    </span>
+  </p>
+<p #tooltip *ngIf="queuedPomodoros > 0">Mouseover for details</p>
   <h4>Tasks backlog</h4>
 </div>
   <div class="container">

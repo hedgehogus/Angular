@@ -8,6 +8,7 @@ import { Task } from '../pomodoro-tasks/pomodoro-tasks.component'
 })
 export class IconsComponent implements OnInit {
   @Input() task: Task;
+  @Input() size: number;
   icons: Object[] = [];
 
   constructor() { }

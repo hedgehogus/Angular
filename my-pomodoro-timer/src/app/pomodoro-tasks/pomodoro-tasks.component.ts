@@ -42,7 +42,7 @@ class TaskService {
 
 @Component({
   selector: 'pomodoro-tasks',
-  templateUrl: './pomodoro-tasks.component.html',
+  templateUrl: './pomodoro-tasks.component.html',  
   styleUrls: ['./pomodoro-tasks.component.css']
 })
 export class PomodoroTasksComponent implements OnInit {
