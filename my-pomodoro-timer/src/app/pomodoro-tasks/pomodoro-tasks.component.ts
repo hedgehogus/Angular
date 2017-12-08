@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Pipe, PipeTransform, Directive, HostListener } from '@angular/core';
 
-interface Task {
+export interface Task {
   name: string;
   deadline: Date;
   queued: boolean;
