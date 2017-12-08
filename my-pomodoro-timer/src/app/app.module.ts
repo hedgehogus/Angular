@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PomodoroTasksComponent } from './pomodoro-tasks/pomodoro-tasks.component';
+import { IconsComponent } from './icons/icons.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PomodoroTasksComponent
+    PomodoroTasksComponent,
+    IconsComponent
   ],
   imports: [
     BrowserModule
