@@ -8,8 +8,7 @@ export interface Task {
 }
 
 class TaskService {
-  public taskStore: Array<Task> = [];
-  sizeValue: number = 50;
+  public taskStore: Array<Task> = [];  
   constructor() {
   const tasks = [
     { 
@@ -47,6 +46,7 @@ class TaskService {
   styleUrls: ['./pomodoro-tasks.component.css']
 })
 export class PomodoroTasksComponent implements OnInit {
+  public sizeValue: number = 50;
   today: Date;
   tasks: Task[];
   queuedPomodoros: number;
