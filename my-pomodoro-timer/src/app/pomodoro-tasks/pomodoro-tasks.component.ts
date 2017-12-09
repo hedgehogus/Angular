@@ -9,6 +9,7 @@ export interface Task {
 
 class TaskService {
   public taskStore: Array<Task> = [];
+  sizeValue: number = 50;
   constructor() {
   const tasks = [
     { 
