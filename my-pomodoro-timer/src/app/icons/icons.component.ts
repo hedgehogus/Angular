@@ -16,7 +16,7 @@ export class IconsComponent implements OnInit {
   ngOnInit() {
     this.icons.length = this.task.pomodorosRequired;
     this.icons.fill({name:this.task.name});
-    console.log(this.size);
+   // console.log(this.size);
   }
 
 }

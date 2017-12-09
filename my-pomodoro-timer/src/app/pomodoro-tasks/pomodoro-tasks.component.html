@@ -7,9 +7,8 @@
   </h3>
   <p>    
     <span *ngFor="let queuedTask of tasks">
-      <app-icons  *ngIf="queuedTask.queued" [task]="queuedTask" [size]='sizeValue'
-        (mouseover)="tooltip.innerText = queuedTask.name"
-        (mouseout)="tooltip.innerText = 'Mouseover for details'">
+      <app-icons  *ngIf="queuedTask.queued" [task]="queuedTask" [size]='sizeValue'>
+                <!-- (mouseover)="tooltip.innerText = queuedTask.name" > //bootstrap--> 
       </app-icons>      
     </span>
   </p>
