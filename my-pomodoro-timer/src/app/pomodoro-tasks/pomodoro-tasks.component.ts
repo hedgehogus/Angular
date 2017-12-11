@@ -1,10 +1,10 @@
-import { Component, OnInit, Input, Pipe, PipeTransform, Directive, HostListener } from '@angular/core';
+import { Component, OnInit, Input, Pipe, Directive, HostListener } from '@angular/core';
 
 export interface Task {
   name: string;
   deadline: Date;
   queued: boolean;
-  pomodorosRequired: number;
+  pomodorosRequired: number;  
 }
 
 class TaskService {
@@ -41,9 +41,10 @@ class TaskService {
 }
 
 @Component({
-  selector: 'pomodoro-tasks',
+  selector: 'pomodoro-tasks',  
   templateUrl: './pomodoro-tasks.component.html',  
   styleUrls: ['./pomodoro-tasks.component.css']
+  
 })
 export class PomodoroTasksComponent implements OnInit {
   public sizeValue: number = 50;

@@ -3,7 +3,7 @@
   <h3>{{queuedPomodoros | i18nPlural:queueHeaderMapping}}
     for today
     <span class="small" *ngIf="queuedPomodoros > 0">
-    (Estimated time: {{ queuedPomodoros * 25 }})</span>
+    (Estimated time: {{ (queuedPomodoros * 25) | pomodoroFormattedTime}})</span>
   </h3>
   <p>    
     <span *ngFor="let queuedTask of tasks">
