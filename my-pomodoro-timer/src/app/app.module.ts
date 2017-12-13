@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { PomodoroTasksComponent } from './pomodoro-tasks/pomodoro-tasks.component';
 import { IconsComponent } from './icons/icons.component';
-import { FormattedTimePipe } from "./formattedTimePipe"
+import { FormattedTimePipe, QueuedOnlyPipe} from "./formattedTimePipe"
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import { FormattedTimePipe } from "./formattedTimePipe"
     AppComponent,
     PomodoroTasksComponent,
     IconsComponent,
-    FormattedTimePipe
+    FormattedTimePipe,
+    QueuedOnlyPipe
   ],
   imports: [
     BrowserModule

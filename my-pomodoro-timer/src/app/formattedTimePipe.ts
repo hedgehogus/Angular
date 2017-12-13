@@ -16,7 +16,7 @@ export class FormattedTimePipe implements PipeTransform {
     name: 'pomodoroQueuedOnly',
     pure: false
 })
-class QueuedOnlyPipe implements PipeTransform {
+export class QueuedOnlyPipe implements PipeTransform {
     transform(tasks: Task[], ...args:any[]): Task[]{
     return tasks.filter ((task: Task) => {
         return task.queued === args[0];
