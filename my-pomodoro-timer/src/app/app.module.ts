@@ -20,10 +20,7 @@ import { TaskTooltipDirective } from './pomodoro-tasks/task-tooltip.directive';
   ],
   imports: [
     BrowserModule
-  ],
-  exports: [
-    TaskTooltipDirective
-  ],
+  ],  
   providers: [],
   bootstrap: [AppComponent]
 })
