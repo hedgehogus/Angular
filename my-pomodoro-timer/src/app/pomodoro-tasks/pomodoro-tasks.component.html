@@ -1,6 +1,6 @@
 <div class="container text-center">
   <img src="assets/img/pomodoro.png" alt="Pomodoro" >
-  <h3>{{queuedPomodoros | i18nPlural:queueHeaderMapping}}
+  <h3 myUnderline>{{queuedPomodoros | i18nPlural:queueHeaderMapping}}
     for today
     <span class="small" *ngIf="queuedPomodoros > 0">
     (Estimated time: {{ (queuedPomodoros * 25) | pomodoroFormattedTime}})</span>
@@ -35,7 +35,7 @@
               Queued
             </span>
           </th>
-          <td>{{task.name | slice:0:35}}
+          <td myUnderline>{{task.name | slice:0:35}}
             <span [hidden]="task.name.length < 35">...</span>
           </td>
           <td>{{task.deadline | date: 'fullDate'}}

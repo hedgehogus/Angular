@@ -8,6 +8,8 @@ import { IconsComponent } from './icons/icons.component';
 import { FormattedTimePipe, QueuedOnlyPipe} from "./formattedTimePipe"
 import { TaskTooltipDirective } from './pomodoro-tasks/task-tooltip.directive';
 
+import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { TaskTooltipDirective } from './pomodoro-tasks/task-tooltip.directive';
     TaskTooltipDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule
   ],  
   providers: [],
   bootstrap: [AppComponent]

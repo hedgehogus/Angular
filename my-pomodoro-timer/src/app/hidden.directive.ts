@@ -1,11 +1,29 @@
-import { Directive, ElementRef, Renderer } from '@angular/core';
+import { Directive, HostListener, Renderer, ElementRef } from '@angular/core';
 
 
-@Directive({ selector: '[myHidden]' })
+@Directive({ selector: '[myUnderline]' })
 
 export class HiddenDirective {
-    constructor(el: ElementRef, renderer: Renderer) {
-     // Use renderer to render the element with styles
-       renderer.setElementStyle(el.nativeElement, 'display', 'none');
+    constructor(
+        private renderer: Renderer,
+        private el: ElementRef
+    ){}
+  
+    @HostListener('mouseenter') onMouseEnter() {
+        this.hover(true);
+    }
+
+    @HostListener('mouseleave') onMouseLeave() {
+        this.hover(false);
+    }
+  
+    hover(shouldUnderline: boolean){
+        if(shouldUnderline){
+            // Mouse enter  
+            this.renderer.setElementStyle(this.el.nativeElement, 'text-decoration', 'underline');
+        } else {
+            // Mouse leave          
+            this.renderer.setElementStyle(this.el.nativeElement, 'text-decoration', 'none');
+        }
     }
 }
