@@ -1,4 +1,5 @@
 import { Directive } from '@angular/core';
+import { Input, Output } from '@angular/core';
 
 @Directive({
     selector: '[selector]',

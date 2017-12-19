@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PomodoroTasksComponent } from './pomodoro-tasks/pomodoro-tasks.component';
 import { IconsComponent } from './icons/icons.component';
 import { FormattedTimePipe, QueuedOnlyPipe} from "./formattedTimePipe"
+import { TaskTooltipDirective } from './pomodoro-tasks/task-tooltip.directive';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormattedTimePipe, QueuedOnlyPipe} from "./formattedTimePipe"
     PomodoroTasksComponent,
     IconsComponent,
     FormattedTimePipe,
-    QueuedOnlyPipe
+    QueuedOnlyPipe,
+    TaskTooltipDirective
   ],
   imports: [
     BrowserModule
