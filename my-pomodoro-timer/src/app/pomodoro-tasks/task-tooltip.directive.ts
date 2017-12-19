@@ -2,7 +2,7 @@ import { Directive, Input, Output, HostListener } from '@angular/core';
 import {Task} from "./pomodoro-tasks.component"
 
 @Directive({
-    selector: '[task]'    
+    selector: '[taskTooltip]'    
 })
 
  export class TaskTooltipDirective {

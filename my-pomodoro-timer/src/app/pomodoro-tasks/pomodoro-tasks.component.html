@@ -7,8 +7,10 @@
   </h3>
   <p>    
     <span *ngFor="let queuedTask of tasks | pomodoroQueuedOnly: true">
-      <app-icons  [task]="queuedTask" [size]='sizeValue'>
-             [taskTooltip]="tooltip"
+      <app-icons  [task]="queuedTask" 
+        [size]='sizeValue'> 
+        <!-- [taskTooltip]='tooltip'> -->
+             
       </app-icons>      
     </span>
   </p>

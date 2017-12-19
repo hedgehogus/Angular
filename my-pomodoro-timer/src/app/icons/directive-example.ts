@@ -17,7 +17,7 @@ class myDirective {
     @Input() otherInputPropertyName: any;
     @Output() otherOutputPropertyName: any;
 
-    constructor(myCustomType: MyCustomType) {
-        // реализация...
-    }
+//     constructor(myCustomType: MyCustomType) {
+//          реализация...
+//     }
 }
