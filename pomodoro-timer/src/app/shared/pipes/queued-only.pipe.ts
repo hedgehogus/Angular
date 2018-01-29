@@ -6,10 +6,10 @@ import { Queueable } from '../shared';
     pure: false
 })
 
-export class QueuedOnlyPipe implements PipeTransform {
+export default class QueuedOnlyPipe implements PipeTransform {
     transform(queueableltems: Queueable[], ...args:any[]): Queueable[]{
     return queueableltems.filter ((queueableltem: Queueable) => {
         return queueableltem.queued === args[0];
-    });
-}
+        });
+    }
 }
