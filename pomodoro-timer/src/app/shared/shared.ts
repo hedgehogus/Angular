@@ -5,7 +5,17 @@ import FormattedTimePipe from './pipes/formatted-time.pipe';
 import QueuedOnlyPipe from './pipes/queued-only.pipe';
 
 import TaskService from "./services/task.service";
-import SetingsService from "./services/settings.service";
+import SettingsService from "./services/settings.service";
+
+const SHARED_PIPES: any[] = [
+    FormattedTimePipe,
+    QueuedOnlyPipe
+];
+
+const SHARED_PROVIDERS: any[] = [
+    SettingsService,
+    TaskService
+]
 
 export {
     Queueable,
@@ -13,7 +23,9 @@ export {
 
     FormattedTimePipe,
     QueuedOnlyPipe,
-    
+    SHARED_PIPES,
+
     TaskService,
-    SetingsService
+    SettingsService,
+    SHARED_PROVIDERS
 };
