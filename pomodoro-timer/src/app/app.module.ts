@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { TimerWidgetComponent } from './timer/timer-widget.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TimerWidgetComponent
   ],
   imports: [
     BrowserModule
