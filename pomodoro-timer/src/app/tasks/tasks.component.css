@@ -1,0 +1,20 @@
+h3, р {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    max-width: 860px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.label {
+   border: 1px solid lightgrey; 
+}
+
+.label-danger{
+    color: red;
+}
