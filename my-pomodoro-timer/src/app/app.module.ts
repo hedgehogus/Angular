@@ -9,6 +9,7 @@ import { FormattedTimePipe, QueuedOnlyPipe} from "./formattedTimePipe"
 import { TaskTooltipDirective } from './pomodoro-tasks/task-tooltip.directive';
 
 import { SharedModule } from './shared/shared.module';
+import { AsyncComponent } from './async/async.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SharedModule } from './shared/shared.module';
     IconsComponent,
     FormattedTimePipe,
     QueuedOnlyPipe,
-    TaskTooltipDirective
+    TaskTooltipDirective,
+    AsyncComponent
   ],
   imports: [
     BrowserModule,
