@@ -12,6 +12,7 @@ export class AsyncComponent implements OnInit {
 
   ngOnInit() {
     //this.asynchronousOperation().then(this.notifyCompletion);
+    this.obs();
   }
 
   // Promise with setInterval
@@ -29,6 +30,15 @@ export class AsyncComponent implements OnInit {
 
   //observable
 
- 
+  obs(){
+    var observable = Observable.create(observer => {
+      setInterval(() => {
+          observer.next('My async operation');
+        }, 5000); 
+    });
+
+    observable.subscribe(response => console.log(response));
+    
+  }
 
 }
