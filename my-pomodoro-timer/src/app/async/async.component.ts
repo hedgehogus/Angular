@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/fromEvent';
+import 'rxjs/Rx';
 
 @Component({
   selector: 'app-async',
@@ -12,7 +14,8 @@ export class AsyncComponent implements OnInit {
 
   ngOnInit() {
     //this.asynchronousOperation().then(this.notifyCompletion);
-    this.obs();
+    //this.obs();
+    this.keys();
   }
 
   // Promise with setInterval
@@ -40,5 +43,30 @@ export class AsyncComponent implements OnInit {
     observable.subscribe(response => console.log(response));
     
   }
+
+  keys(){
+    var keyboardStream = Observable
+          .fromEvent(document, 'keyup')
+          .map(x => {return x.which})
+          .filter(x => {return x > 36 && x < 41})
+          .map(x => {
+            var direction; 
+            switch(x) {
+              case 37:
+                direction = 'left'; 
+                break;
+              case 38:
+                direction = 'up'; 
+                break;
+              case 39:
+                direction = 'right'; 
+                break;
+              default:
+                direction = 'down';
+            }
+            return direction;});
+
+    keyboardStream.subscribe(response => console.log(response));
+  };
 
 }
