@@ -11,6 +11,8 @@ import { TaskTooltipDirective } from './pomodoro-tasks/task-tooltip.directive';
 import { SharedModule } from './shared/shared.module';
 import { AsyncComponent } from './async/async.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { AsyncComponent } from './async/async.component';
   ],
   imports: [
     BrowserModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],  
   providers: [],
   bootstrap: [AppComponent]

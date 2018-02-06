@@ -3,19 +3,23 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
 import 'rxjs/Rx';
 
+import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-async',
   templateUrl: './async.component.html',
   styleUrls: ['./async.component.css']
 })
 export class AsyncComponent implements OnInit {
+  response:string = "no";
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     //this.asynchronousOperation().then(this.notifyCompletion);
     //this.obs();
-    this.keys();
+    //this.keys();
+    this.reque();
   }
 
   // Promise with setInterval
@@ -68,5 +72,14 @@ export class AsyncComponent implements OnInit {
 
     keyboardStream.subscribe(response => console.log(response));
   };
+
+  reque(){
+    var myHttpRequest: Observable<Object> = this.http.get('https://api.github.com');
+
+    myHttpRequest.subscribe(data => {
+      console.log(data.current_user_url);
+      this.response = data.current_user_url;
+    });
+  }
 
 }
